@@ -13,3 +13,6 @@
 
 (deftest east-rover-faces-south-after-turning-right
   (is (= (rover :south) (turn-right (rover :east)))))
+
+(deftest south-rover-faces-west-after-turning-right
+  (is (= (rover :west) (turn-right (rover :south)))))
