@@ -32,12 +32,7 @@
     "M" (move rover)))
 
 (defn simulate [initial-rover commands]
-  (loop [rover initial-rover
-         remaining-commands commands]
-    (if (empty? remaining-commands)
-      rover
-      (recur (execute rover (first remaining-commands)) (rest remaining-commands)))))
-
+  (reduce execute initial-rover commands))
 
 
 
