@@ -6,5 +6,5 @@
 (def rover {:coordinate position :bearing :north})
   
 
-(deftest rover-turns-right
+(deftest north-rover-faces-east-after-turning-right
   (is (= {:coordinate position :bearing :east} (turn-right rover))))
