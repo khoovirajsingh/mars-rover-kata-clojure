@@ -24,4 +24,4 @@
   (is (= {:coordinate {:x 1 :y 2} :bearing :north} (move (rover :north)))))
 
 (deftest south-rover-moves-down
-  (is (= {:coordinate {:x 1 :y 0} :bearing :south} (move {:coordinate {:x 1 :y 1} :bearing :south}))))
+  (is (= {:coordinate {:x 1 :y 0} :bearing :south} (move (rover :south)))))
