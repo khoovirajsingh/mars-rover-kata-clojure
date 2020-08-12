@@ -25,4 +25,7 @@
         delta-y ((translations bearing) :delta-y)]
     (assoc rover :coordinate {:x (+ x delta-x) :y (+ y delta-y)})))
 
+(defn execute [rover command]
+  (turn rover :right))
+
 

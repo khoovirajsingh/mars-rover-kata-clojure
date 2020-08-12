@@ -31,3 +31,6 @@
 
 (deftest west-rover-moves-left
   (is (= {:coordinate {:x 0 :y 1} :bearing :west} (move (rover :west)))))
+
+(deftest rover-executes-a-command
+  (is (= (rover :east) (execute (rover :north) "R"))))
