@@ -7,5 +7,6 @@
 
 (defn turn-right [rover]
   (let [bearing (rover :bearing)]
-    (assoc rover :bearing (rotations bearing :right))))
+    (assoc rover :bearing ((rotations bearing) :right))))
+
 
