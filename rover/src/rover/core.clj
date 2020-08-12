@@ -7,9 +7,9 @@
    :south {:right :west :left :east}
    :west {:right :north :left :south}})
 
-(defn turn-right [rover]
+(defn turn [rover direction]
   (let [bearing (rover :bearing)]
-    (assoc rover :bearing ((rotations bearing) :right))))
+    (assoc rover :bearing ((rotations bearing) direction))))
 
 (defn turn-left [rover]
   (let [bearing (rover :bearing)]

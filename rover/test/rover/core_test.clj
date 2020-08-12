@@ -9,13 +9,13 @@
   (assoc test-rover :bearing direction))
 
 (deftest north-rover-faces-east-after-turning-right
-  (is (= (rover :east) (turn-right (rover :north)))))
+  (is (= (rover :east) (turn (rover :north) :right))))
 
 (deftest east-rover-faces-south-after-turning-right
-  (is (= (rover :south) (turn-right (rover :east)))))
+  (is (= (rover :south) (turn (rover :east) :right))))
 
 (deftest south-rover-faces-west-after-turning-right
-  (is (= (rover :west) (turn-right (rover :south)))))
+  (is (= (rover :west) (turn (rover :south) :right))))
 
 (deftest north-rover-faces-west-after-turning-left
-  (is (= (rover :west) (turn-left (rover :north)))))
+  (is (= (rover :west) (turn (rover :north) :left))))
