@@ -9,7 +9,8 @@
 
 (def translations
   {:north {:delta-x 0 :delta-y 1}
-   :south {:delta-x 0 :delta-y -1}})
+   :south {:delta-x 0 :delta-y -1}
+   :east {:delta-x 1 :delta-y 0}})
 
 (defn turn [rover direction]
   (let [bearing (rover :bearing)]

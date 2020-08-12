@@ -25,3 +25,6 @@
 
 (deftest south-rover-moves-down
   (is (= {:coordinate {:x 1 :y 0} :bearing :south} (move (rover :south)))))
+
+(deftest east-rover-moves-right
+  (is (= {:coordinate {:x 2 :y 1} :bearing :east} (move (rover :east)))))
