@@ -3,7 +3,9 @@
 
 (def rotations
   {:north {:right :east}
-   :east {:right :south}})
+   :east {:right :south}
+   :south {:right :west}
+   :west {:right :north}})
 
 (defn turn-right [rover]
   (let [bearing (rover :bearing)]
