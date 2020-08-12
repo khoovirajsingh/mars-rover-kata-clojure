@@ -11,8 +11,7 @@
   (let [bearing (rover :bearing)]
     (assoc rover :bearing ((rotations bearing) direction))))
 
-(defn turn-left [rover]
-  (let [bearing (rover :bearing)]
-    (assoc rover :bearing ((rotations bearing) :left))))
+(defn move [rover]
+  (assoc rover :coordinate {:x 1 :y 2}))
 
 

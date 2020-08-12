@@ -19,3 +19,6 @@
 
 (deftest north-rover-faces-west-after-turning-left
   (is (= (rover :west) (turn (rover :north) :left))))
+
+(deftest north-rover-moves-up
+  (is (= {:coordinate {:x 1 :y 2} :bearing :north} (move (rover :north)))))
