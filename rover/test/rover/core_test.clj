@@ -37,3 +37,6 @@
 
 (deftest rover-executes-a-command-L
   (is (= (rover :west) (execute (rover :north) "L"))))
+
+(deftest rover-executes-a-command-M
+  (is (= {:coordinate {:x 1 :y 2} :bearing :north} (execute (rover :north) "M"))))

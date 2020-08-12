@@ -28,6 +28,7 @@
 (defn execute [rover command]
   (case command
     "R" (turn rover :right)
-    "L" (turn rover :left)))
+    "L" (turn rover :left)
+    "M" (move rover)))
 
 
