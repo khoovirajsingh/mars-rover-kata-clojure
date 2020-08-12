@@ -40,3 +40,6 @@
 
 (deftest rover-executes-a-command-M
   (is (= {:coordinate {:x 1 :y 2} :bearing :north} (execute (rover :north) "M"))))
+
+(deftest rover-executes-multiple-commands
+  (is (= {:coordinate {:x 2 :y 2} :bearing :east} (simulate (rover :north) ["M" "R" "R" "L" "M"]))))
