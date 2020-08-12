@@ -3,8 +3,13 @@
             [rover.core :refer :all]))
 
 (def position {:x 1 :y 1})
-(def rover {:coordinate position :bearing :north})
-  
+(def test-rover {:coordinate position :bearing :north})
+
+(defn rover [direction]
+  (assoc test-rover :bearing direction))
 
 (deftest north-rover-faces-east-after-turning-right
-  (is (= {:coordinate position :bearing :east} (turn-right rover))))
+  (is (= (rover :east) (turn-right (rover :north)))))
+
+(deftest east-rover-faces-south-after-turning-right
+  (is (= (rover :south) (turn-right (rover :east)))))
