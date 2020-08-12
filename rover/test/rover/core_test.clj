@@ -2,6 +2,9 @@
   (:require [clojure.test :refer :all]
             [rover.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(def position {:x 1 :y 1})
+(def rover {:coordinate position :bearing :north})
+  
+
+(deftest rover-turns-right
+  (is (= {:coordinate position :bearing :east} (turn-right rover))))
