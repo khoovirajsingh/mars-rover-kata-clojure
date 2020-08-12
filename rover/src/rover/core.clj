@@ -26,6 +26,8 @@
     (assoc rover :coordinate {:x (+ x delta-x) :y (+ y delta-y)})))
 
 (defn execute [rover command]
-  (turn rover :right))
+  (case command
+    "R" (turn rover :right)
+    "L" (turn rover :left)))
 
 
