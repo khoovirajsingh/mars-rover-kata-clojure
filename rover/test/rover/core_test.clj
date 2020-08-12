@@ -22,3 +22,6 @@
 
 (deftest north-rover-moves-up
   (is (= {:coordinate {:x 1 :y 2} :bearing :north} (move (rover :north)))))
+
+(deftest north-rover-moves-up-twice
+  (is (= {:coordinate {:x 1 :y 3} :bearing :north} (move {:coordinate {:x 1 :y 2} :bearing :north}))))

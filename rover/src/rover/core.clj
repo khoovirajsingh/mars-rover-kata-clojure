@@ -7,11 +7,19 @@
    :south {:right :west :left :east}
    :west {:right :north :left :south}})
 
+(def translations
+  {:north {:delta-x 0 :delta-y 1}})
+
 (defn turn [rover direction]
   (let [bearing (rover :bearing)]
     (assoc rover :bearing ((rotations bearing) direction))))
 
 (defn move [rover]
-  (assoc rover :coordinate {:x 1 :y 2}))
+  (let [bearing (rover :bearing)
+        x ((rover :coordinate) :x)
+        y ((rover :coordinate) :y)
+        delta-x ((translations bearing) :delta-x)
+        delta-y ((translations bearing) :delta-y)]
+    (assoc rover :coordinate {:x (+ x delta-x) :y (+ y delta-y)})))
 
 
