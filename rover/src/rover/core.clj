@@ -2,5 +2,5 @@
   (:gen-class))
 
 (defn turn-right [rover]
-  rover)
+  (assoc rover :bearing :east))
 
